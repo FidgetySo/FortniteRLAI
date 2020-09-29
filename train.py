@@ -35,19 +35,19 @@ class Actions:
     def action(self, choice):
         cursor_x, cursor_y = pydirectinput.position()
         
-        if cursor_x >= 1920:
+        if cursor_x >= 1900:
             pydirectinput.keyDown('alt')
             time.sleep(0.015)
             pydirectinput.keyUp('alt')
-        elif cursor_x <= 10:
+        elif cursor_x <= 20:
             pydirectinput.keyDown('alt')
             time.sleep(0.015)
             pydirectinput.keyUp('alt')
-        if cursor_y >= 1070:
+        if cursor_y >= 1060:
             pydirectinput.keyDown('alt')
             time.sleep(0.015)
             pydirectinput.keyUp('alt')
-        elif cursor_y <= 10:
+        elif cursor_y <= 20:
             pydirectinput.keyDown('alt')
             time.sleep(0.015)
             pydirectinput.keyUp('alt')
