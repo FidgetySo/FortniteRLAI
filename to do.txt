@@ -1,0 +1,8 @@
+Things that are needed to be finished:
+	Speed up the code
+	Possibly switch to https://github.com/aravindsrinivas/curl_rainbow
+	Check Rewards
+	Train on creative for 5 evalautions then on a match
+	Automaticaly get into a new match
+	Get a better pc
+	
