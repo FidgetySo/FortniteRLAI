@@ -30,7 +30,7 @@ pydirectinput.FAILSAFE = False
 def set_pos(x, y):
     pydirectinput.move(x, y)
 
-
+building = False
 class Actions:
     def action(self, choice):
         cursor_x, cursor_y = pydirectinput.position()
@@ -85,6 +85,10 @@ class Actions:
             pydirectinput.keyUp('space')
         elif choice == 11:
             pydirectinput.press('0')
+            if building:
+                building = False
+            else:
+                building = True
             time.sleep(0.015)
             
 class Env:
@@ -130,9 +134,13 @@ class Env:
         if self.current_health < previus_health:
             reward += self.current_health - previus_health
         elif self.current_health > previus_health:
-            reward += self.current_health - previus_health
-        if action == 0 and reward_damage <= 0:
-            reward -= 0.1
+            reward += self.current_health - previus_healt:
+        if building:
+            if action == 0:
+                reward += .075
+        else:
+            if action == 0 and reward_damage <= 0:
+                reward -= 0.1
         if done_check > 5000:
             done = True
             pyautogui.keyUp('shift')
